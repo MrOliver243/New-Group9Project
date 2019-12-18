@@ -7,6 +7,8 @@ import Footer from './components/footerComponents/footer';
 import Homepage from './components/pages/homePage';
 import GameGenres from './components/pages/gameGenres';
 import GameFrame from './components/gameTemplates/GameFrame';
+import GameGenreTemp from './components/gameTemplates/gameGenreTemp';
+
 //redux
 import { Provider } from 'react-redux';
 import store from './Redux/store';
@@ -26,6 +28,8 @@ function App() {
             <Route exact path='/' component={ Homepage } />
             <Route exact path='/GameGenres' component={ GameGenres } />
             <Route exact path='/:gameId' component={ GameFrame } reload/>
+            <Route exact path='/GameGenres/:gameGenre' component={ GameGenreTemp }/>
+
 
           </Switch>
         <Footer />
