@@ -24,21 +24,38 @@ class GameGenres extends Component {
       <div className='container-fluid'>
       <style type="text/css">
       {`
-      .btn-MOBA {
+      #MOBA {
         background-color: blue;
         color: white;
+        width:400px;
+        height:200px;
       }
-      .btn-RPG {
+      #overall {
+        position: center;
+        padding-left: 45%;
+        padding-top:20px;
+        padding-bottom:50px;
+      }
+      #RPG {
         background-color: green;
         color: white;
+        width: 400px;
+        height: 200px;
       }
-      .btn-OW {
-        background-color: red;
-        color: white;
+      #rrrr {
+        padding-top: 10px;
       }
-      .btn-TPS {
+      #rrrrrrrr {
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+      #spacer {
+        padding-top: 50px;
+      }
+      #thirdPersonShooter {
         background-color: purple;
         color: white;
+
       }
       .btn-xxl {
         width: 50%;
@@ -49,59 +66,37 @@ class GameGenres extends Component {
       `}
     </style>
 
-
-
+<div id="overall">
     <Container>
-      <Row>
+
+      <Row id="spacer">
         <Col sm={{ span: 10 }}>
-          <Link to='/GameGenres/MOBA'>MOBA</Link>
+            <Link to='/GameGenres/MOBA'>MOBA</Link>
         </Col>
+        </Row>
+
+        <Row id="spacer">
         <Col>
         <Link to='/GameGenres/RPG'>RPG</Link>
         </Col>
       </Row>
-      <Row>
+      <Row id="spacer">
         <Col sm={{ span: 10 }}>
         <Link to='/GameGenres/thirdPersonShooter'>Third Person Shooter</Link>
         </Col>
-        <Col>
-        <Link to='/GameGenres/openWorld'>Open World</Link>
-        </Col>
+      </Row>
+      <Row id="spacer">
+      <Col>
+      <Link to='/GameGenres/openWorld'>Open World</Link>
+      </Col>
       </Row>
     </Container>
-
+    </div>
   </div>
     );
   }
 }
 
-
-/*
-
-
-<Button variant="MOBA" size="xxl">MOBA</Button>
-<Button variant="RPG" size="xxl">RPG</Button>
-<Button variant="OW" size="xxl">Open World</Button>
-<Button variant="TPS" size="xxl">Third Person Shooter</Button>
-
-
-
-
-
-
-        <h1>Games Genres</h1>
-        <h3>MOBA</h3>
-        <div>{ MOBA }</div>
-        <h3>RPG</h3>
-        <div>{ RPG }</div>
-        <h3>open world</h3>
-        <div>{ openWorld }</div>
-        <h3>Third Person Shooter</h3>
-        <div>{ thirdPersonShooter }</div>
-      </div>
-
-
-*/
 
 
 
