@@ -47,7 +47,11 @@ class GameFrame extends Component {
           gameWpedia={game.wikipediaPage}
           gameImage={game.image}
           gameOffic = {game.officialWebsite}
+          gameVid={game.video}
+          gameBac={game.cover}
           pClick={null}
+
+          
 
         />
         <ReviewFrame passGame={game.gameId} key={game.gameId + "-0okp[,]"} />
