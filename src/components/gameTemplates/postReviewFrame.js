@@ -20,7 +20,8 @@ class PostReview extends Component {
     errors: {},
     currentTitle: null,
     reviewId:'',
-    rating:''
+    rating:'',
+    gameId: null
   };
   /*
   componentWillReceiveProps(nextProps) {
@@ -38,17 +39,17 @@ class PostReview extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    this.props.postReview({
+
+    const newReview = {
       body: this.state.body,
       handle: this.state.handle,
-      reviewId: this.state.reviewId,
-      rating: this.state.rating
-    });
-  };
+      gameId: this.props.data.game.gameId
+    };
+    this.props.postReview(newReview);
+  }
   render() {
     //const { currentTitle } = this.props.data.game.title;
     const { errors , user, authenticated }  = this.props;
-    const { current } = this.props;
     
     const reviewForm = authenticated ? (
       
@@ -95,7 +96,7 @@ PostReview.propTypes = {
 
 const mapStateToProps = (state) => ({
   data: state.data,
-    authenticated: state.user.authenticated
+   authenticated: state.user.authenticated
 
 
 });
