@@ -13,21 +13,19 @@ import gateway from '../logo/gateway.png';
 //Redux
 import { loginUser, logoutUser } from '../../Redux/actions/userActions';
 
-
 class Header extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { addModalShowSignup: false}
+    this.state = { addModalShowSignup: false }
   }
 
   handleLogout = () => {
     this.props.logoutUser();
   }
 
-
   render() {
-    let addModalCloseSignup =() => this.setState({addModalShowSignup: false});
+    let addModalCloseSignup = () => this.setState({addModalShowSignup: false});
 
     const { authenticated } = this.props.user;
 
@@ -38,28 +36,26 @@ class Header extends Component {
     );
 
     const guestLinks = (
-      <LoginButton />
+          <LoginButton/>
     );
 
     return (
-        <header className="sansserif">
-
-          <div className='logo'>
+        <header>
+            <div className='logo'>
           <img src = {gateway} alt="Gateway" style={{width: '10%'}} />
           <div  style={{color: '#81C91D'}}>The Gateway</div>
           </div>
+      
+          <div>
 
-            <div>
 
           <nav>
-
-            <ul  >
-
-              <li className="first" >
+            <ul>
+              <li className="first">
                 <Link to="/">Home</Link>
               </li>
               <li>
-                <Link to="/Games">Games</Link>
+                <Link to="/GameGenres">Genres</Link>
               </li>
               <li>
                 <Link to="/FAQ">FAQ</Link>
@@ -67,13 +63,12 @@ class Header extends Component {
 
               { authenticated ? userLinks: guestLinks }
 
-
               <li className="last">
                 <ButtonToolbar>
                   <Button
                     variant = 'primary'
                     onClick={()=> this.setState({ addModalShowSignup: true})}>
-                    Register
+                    Signup
                   </Button>
 
                   <Signup
@@ -83,11 +78,8 @@ class Header extends Component {
 
                 </ButtonToolbar>
               </li>
-
             </ul>
           </nav>
-
-          </div>
 
         </header>
     );
