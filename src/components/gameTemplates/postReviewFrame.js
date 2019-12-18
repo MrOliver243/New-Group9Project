@@ -47,10 +47,11 @@ class PostReview extends Component {
   };
   render() {
     //const { currentTitle } = this.props.data.game.title;
-
-    const { errors } = this.state;
+    const { errors , user, authenticated }  = this.props;
     const { current } = this.props;
-    return (
+    
+    const reviewForm = authenticated ? (
+      
       <div className= "container">
       <Form onSubmit={ this.handleSubmit }>
   <Form.Group controlId="formBasicEmail">
@@ -78,7 +79,11 @@ class PostReview extends Component {
 </Form>
 
       </div>
-    );
+    
+    
+    ) : null;
+    
+    return reviewForm;
   }
 }
 
