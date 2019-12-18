@@ -1,0 +1,94 @@
+body {
+  background: #ecf0f1;
+  color: black;
+}
+
+.nav-bar {
+  color: #333333;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.nav-bar {
+  background: #ecf0f1;
+}
+
+.back-btn {
+  font-size: 40px;
+  color: red;
+}
+.user-projects {
+  background: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+  color: black;
+  margin-top: 40px;
+  margin-bottom: 0px;
+  padding: 40px 40px;
+  width: 1000px;
+}
+
+.game-review {
+  width: 300px;
+  margin: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+}
+
+.game-review-img {
+  height: 264px;
+}
+.like-btn,
+.dislike-btn {
+  color: black;
+  background: transparent;
+  border: 1px solid transparent;
+}
+
+.like-btn:hover,
+.dislike-btn:hover,
+.like-btn:focus,
+.dislike-btn:focus {
+  cursor: pointer;
+  outline: 0;
+}
+
+.like-btn:hover {
+  color: #0be881;
+  border: 1px solid transparent;
+  background: transparent;
+  outline: 0;
+}
+
+.dislike-btn:hover {
+  color: red;
+  border: 1px solid transparent;
+  background: transparent;
+  outline: 0;
+}
+
+.icon-size {
+  transition: color 1s;
+  color: black;
+  font-size: 40px;
+}
+
+.icon-size:hover {
+  transition: color 1s;
+  color: red;
+}
+
+.hover {
+  cursor: pointer;
+}
+
+.load-screen {
+  height: 100vh;
+}
+
+.make-row{
+
+  margin-top: 20px;
+}
+
+.back{
+
+  background-color: lightblue;
+}
