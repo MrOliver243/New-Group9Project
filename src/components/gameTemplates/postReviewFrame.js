@@ -53,7 +53,7 @@ class PostReview extends Component {
     
     const reviewForm = authenticated ? (
       
-      <div className= "container">
+      <div className= "container front make-top">
 
       <Form onSubmit={ this.handleSubmit }>
   <Form.Group>
