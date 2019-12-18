@@ -54,14 +54,15 @@ class PostReview extends Component {
     const reviewForm = authenticated ? (
       
       <div className= "container">
+
       <Form onSubmit={ this.handleSubmit }>
-  <Form.Group controlId="formBasicEmail">
-    <Form.Label>username</Form.Label>
-    <Form.Control type="username" placeholder="Enter username" name="handle"/>
+  <Form.Group>
+    <Form.Label>Review Title</Form.Label>
+    <Form.Control type="username" placeholder="Enter username" name="handle" value={this.state.handle} onChange={this.handleChange}/>
   </Form.Group>
   <Form.Group controlId="exampleForm.ControlSelect1">
     <Form.Label>Enter rating</Form.Label>
-    <Form.Control as="select" name="rating">
+    <Form.Control as="select" name="rating" value={this.state.rating} onChange={this.handleChange}>
       <option>1</option>
       <option>2</option>
       <option>3</option>
@@ -69,15 +70,16 @@ class PostReview extends Component {
       <option>5</option>
     </Form.Control>
   </Form.Group>
-
   <Form.Group controlId="reviewArea">
   <Form.Label>Review game now</Form.Label>
-  <Form.Control as="textarea" rows="5" name="body"/>
+  <Form.Control as="textarea" rows="5" name="body" value={this.state.body} onChange={this.handleChange}/>
+  <Form.Text style={{color:'red'}} className="text-muted">{ errors }</Form.Text>
 </Form.Group>
   <Button variant="primary" type="submit">
     Submit
   </Button>
 </Form>
+ 
 
       </div>
     
