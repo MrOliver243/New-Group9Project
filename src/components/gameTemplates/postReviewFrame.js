@@ -89,13 +89,15 @@ class PostReview extends Component {
 
 PostReview.propTypes = {
   postReview: PropTypes.func.isRequired,
-  clearErrors: PropTypes.func.isRequired,
+  authenticated: PropTypes.bool.isRequired,
   data: PropTypes.object.isRequired
 };
 
 const mapStateToProps = (state) => ({
-  data: state.data
+  data: state.data,
+    authenticated: state.user.authenticated
+
 
 });
 
-export default connect(mapStateToProps, { postReview, clearErrors })(PostReview);
+export default connect(mapStateToProps, { postReview })(PostReview);
