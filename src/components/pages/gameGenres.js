@@ -33,8 +33,8 @@ class GameGenres extends Component {
       #overall {
         position: center;
         padding-left: 45%;
-        padding-top:20px;
-        padding-bottom:50px;
+        padding-top:100px;
+        padding-bottom:100%;
       }
       #RPG {
         background-color: green;
